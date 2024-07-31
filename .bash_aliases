@@ -1,6 +1,5 @@
 # Convenience
 alias py='python3'
-alias gs='git status'
 alias cl='clear'
 alias lsa='ls -a'
 
@@ -16,3 +15,7 @@ alias dc='cd'
 
 # script shortcuts
 alias batlife=/home/whimsickal/scripts/batlife
+
+# git shortcuts
+alias gs='git status'
+alias gl='git log --all --graph --decorate'
