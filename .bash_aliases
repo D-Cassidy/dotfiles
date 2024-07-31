@@ -18,4 +18,3 @@ alias batlife=/home/whimsickal/scripts/batlife
 
 # git shortcuts
 alias gs='git status'
-alias gl='git log --all --graph --decorate'
