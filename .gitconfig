@@ -1,0 +1,10 @@
+[user]
+	email = declanpcassidy1@gmail.com
+	name = D-Cassidy
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+	excludesfile = /home/whimsickal/.gitignore_global
+[alias]
+    graph = log --all --graph --decorate --oneline
