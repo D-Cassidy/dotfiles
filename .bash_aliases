@@ -2,6 +2,7 @@
 alias py='python3'
 alias cl='clear'
 alias lsa='ls -a'
+alias winh='cd /mnt/c/Users/decla/'
 
 # Creates parent directories if they don't exist by default with mkdir
 alias mkdir='mkdir -p'
