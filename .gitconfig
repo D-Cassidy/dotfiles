@@ -7,4 +7,4 @@
 	editor = vim
 	excludesfile = /home/whimsickal/.gitignore_global
 [alias]
-    graph = log --all --graph --decorate --oneline
+    graph = log --all --graph --decorate 
