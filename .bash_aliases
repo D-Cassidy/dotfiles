@@ -3,6 +3,8 @@ alias py='python3'
 alias cl='clear'
 alias lsa='ls -a'
 alias winh='cd /mnt/c/Users/decla/'
+alias docs='cd /mnt/c/Users/decla/Documents/'
+alias downs='cd /mnt/c/Users/decla/Downloads/'
 alias tree='tree -I env'
 
 # Creates parent directories if they don't exist by default with mkdir
