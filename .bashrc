@@ -118,3 +118,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export PATH=/mnt/c/Users/decla/Documents/kattel-research/vaspkit.1.3.5/bin:${PATH}
