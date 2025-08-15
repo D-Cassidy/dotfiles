@@ -6,6 +6,9 @@ alias downs='cd /mnt/c/Users/decla/Downloads/'
 alias tree='tree -I env'
 alias res='cd /mnt/c/Users/decla/Documents/kattel-research'
 
+# Vim to Nvim
+alias vim='nvim'
+
 # Creates parent directories if they don't exist by default with mkdir
 alias mkdir='mkdir -p'
 
