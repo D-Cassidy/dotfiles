@@ -6,8 +6,12 @@ Your dotfiles are a way to personalize your local terminal environment, these ar
 Keeping your dotfiles in a git repository makes it easy to set up in a new environment using packages like GNU stow. Feel free to clone them to your own system or read through for inspiration
 
 ## Installation
-Install GNU Stow using your machine's package manager (usually apt or pacman)
-Run this:
+Install GNU Stow using your machine's package manager (usually apt or pacman) <br>
+On my system (Arch btw) that looks like this:
+```bash
+sudo pacman -S stow
+```
+Then run this to install:
 ```bash
 git clone https://github.com/D-Cassidy/dotfiles ~/.dotfiles
 cd ~/.dotfiles
