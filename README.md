@@ -7,11 +7,12 @@ Keeping your dotfiles in a git repository with an installation script makes it v
 new coding environment on a new system or a virtual environment. These personalizations include some pretty basic aliases in bash, a few alterations to the .gitconfig, and some heavier alterations to the vim and tmux environments. Feel free to clone or read through for inspiration.
 
 ## Installation
+Install GNU Stow using your machine's package manager (usually apt or pacman)
 Run this:
 ```bash
-git clone https://github.com/D-Cassidy/dotfiles ~/dotfiles
-cd ~/dotfiles
-./install-dotfiles
+git clone https://github.com/D-Cassidy/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+stow <package_name>
 ```
-Alternatively you can clone the repo into ~/.dotfiles if you want the folder to be hidden. <br>
-You will need to restart your terminal or manually use ```source``` on each dotfile for the changes to occur.
+This will recreate the file structure found in the chosen package repository on your local machine <br> 
+I.e. "stow hyprland" will place the .conf files from .dotfiles into ~/.config/hypr/*.conf <br>
