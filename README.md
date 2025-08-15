@@ -3,8 +3,7 @@
 ## Description
 Your dotfiles are a way to personalize your local terminal environment, these are mine. <br>
 
-Keeping your dotfiles in a git repository with an installation script makes it very easy to set up a 
-new coding environment on a new system or a virtual environment. These personalizations include some pretty basic aliases in bash, a few alterations to the .gitconfig, and some heavier alterations to the vim and tmux environments. Feel free to clone or read through for inspiration.
+Keeping your dotfiles in a git repository makes it easy to set up in a new environment using packages like GNU stow. Feel free to clone them to your own system or read through for inspiration
 
 ## Installation
 Install GNU Stow using your machine's package manager (usually apt or pacman)
