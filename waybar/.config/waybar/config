@@ -2,7 +2,7 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces","custom/pacman","tray"],
+        "modules-left": ["hyprland/workspaces","custom/pacman"],
         "modules-center": ["clock"],
         "modules-right": ["group/expand","bluetooth","network","battery"],
 
@@ -15,7 +15,7 @@
                 "empty": ""
             },
             "persistent-workspaces": {
-                "*": [ 1,2,3,4,5,6,7,8,9,0 ]
+                "*": [ 1,2,3,4,5,6,7,8,9,10]
             }
         },
         "custom/notification": {
@@ -45,7 +45,7 @@
             "tooltip-format-disconnected": "Error",
             "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
             "tooltip-format-ethernet": "{ifname} 🖧 ",
-            "on-click": "alacritty nmtui"
+            "on-click": "alacritty -e nmtui"
         },
         "bluetooth": {
             "format-on": "󰂯",
@@ -84,7 +84,7 @@
             "interval": 30,   
             "exec": "checkupdates | wc -l",
             "exec-if": "exit 0",
-            "on-click": "alacritty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+            "on-click": "alacritty -e sh -c 'sudo pacman -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
             "signal": 8,
             "tooltip": false,
         },
@@ -103,7 +103,7 @@
                 "transition-to-left": true,
                 "click-to-reveal": true
             },
-            "modules": ["custom/expand", "custom/colorpicker","cpu","memory","temperature","custom/endpoint"],
+            "modules": ["custom/expand", "tray", "cpu","memory","temperature","custom/endpoint"],
         },
         "custom/colorpicker": {
             "format": "{}",
