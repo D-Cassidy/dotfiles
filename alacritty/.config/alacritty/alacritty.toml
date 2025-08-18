@@ -6,5 +6,5 @@ opacity = 0.8
 decorations_theme_variant = "Dark"
 
 [font]
-bold = { family = "IosevkaTermSlabNerdFontPropo", style = "Medium" }
+normal = { family = "CodeNewRomanNerdFontPropo", style="Regular"}
 size = 11
