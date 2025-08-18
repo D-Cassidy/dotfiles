@@ -2,7 +2,7 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces","custom/pacman"],
+        "modules-left": ["custom/notification", "hyprland/workspaces","custom/pacman"],
         "modules-center": ["clock"],
         "modules-right": ["group/expand","bluetooth","network","battery"],
 
