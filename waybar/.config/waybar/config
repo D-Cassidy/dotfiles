@@ -59,9 +59,8 @@
                 "portable": "",
                 "car": "",
                 "default": ["", "", ""]
+            },
         },
-        "on-click": "pavucontrol"
-    },
         "network": {
             "format-wifi": "",
             "format-ethernet":"",
