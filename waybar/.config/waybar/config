@@ -112,7 +112,7 @@
             "tooltip": false,
         },
         "custom/expand": {
-            "format": "<",
+            "format": "〈 ",
             "tooltip": false
         },
         "custom/endpoint":{
