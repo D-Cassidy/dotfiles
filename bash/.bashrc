@@ -123,4 +123,6 @@ export PATH=/mnt/c/Users/decla/Documents/kattel-research/vaspkit.1.3.5/bin:${PAT
 # fix ugly directory highlighting
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
+(cat ~/.cache/wal/sequences &)
+
 fastfetch
