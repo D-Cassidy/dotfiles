@@ -6,5 +6,5 @@ opacity = 0.8
 decorations_theme_variant = "Dark"
 
 [font]
-normal = { family = "CodeNewRomanNerdFontPropo", style="Regular"}
+normal = { family = "CodeNewRomanNerdFont", style="Regular"}
 size = 11
