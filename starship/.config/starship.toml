@@ -68,9 +68,6 @@ Unknown = " "
 Void = " "
 Windows = "󰍲 "
 
-[cmd_duration]
-format = "[$duration](fg:red)"
-
 [directory]
 format = "[$path](bg:green fg:black)"
 truncation_length = 2
