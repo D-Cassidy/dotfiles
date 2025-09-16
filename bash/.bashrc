@@ -60,7 +60,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;34m\]\u@\h\[\e[00m\]:\[\e[01;32m\]\w\[\e[00m\] > '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;34m\]\u\e[00;37m\]@\e[00;34m\]\h\[\e[00m\]:\[\e[01;36m\]\w\[\e[00m\] > '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w > '
 fi
@@ -118,11 +118,17 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=/mnt/c/Users/decla/Documents/kattel-research/vaspkit.1.3.5/bin:${PATH}
 
 # fix ugly directory highlighting
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
-(cat ~/.cache/wal/sequences &)
+# starship
+eval "$(starship init bash)"
 
 fastfetch
+
+# Created by `pipx` on 2025-08-30 16:26:17
+export PATH="$PATH:/home/whimsickal/.local/bin"
+
+# Created for vaspkit
+export PATH="$HOME/opt/vaspkit/bin:$PATH"
