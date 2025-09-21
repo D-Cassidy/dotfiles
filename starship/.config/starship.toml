@@ -1,247 +1,131 @@
-format = """\
-[](fg:blue)\
-$os\
-[](bg:blue fg:blue)\
-$username\
-[](bg:blue fg:green)\
-$directory\
-[ ](fg:green)\
-$git_branch\
-$git_status\
-$all\
-$character"""
+# ~/.config/starship.toml
 
 add_newline = false
+continuation_prompt = "[▸▹ ](dimmed white)"
+
+format = """[┌──\\(](dimmed blue)$username[@](white)$hostname[\\)-\\[](dimmed blue)$time[\\]-\\[](dimmed blue)$directory[\\]](dimmed blue)\
+(\n[│](green)( $python) |( $git_branch$git_commit$git_state))
+[└](dimmed blue)$cmd_duration[─](dimmed blue)[\\$ ](bold blue)"""
+right_format = '''$battery'''
+
+
+[python]
+format = '[\[$symbol$version\][(\[$virtualenv\])](dimmed red)]($style)'
+symbol = ' '
+version_format = 'v${raw}'
+pyenv_version_name = false
+
+[git_branch]
+format = '[\[$symbol$branch\]]($style)'
+
+[git_commit]
+format = '[\[commit hash:$hash$tag\]]($style)'
+commit_hash_length = 8
+only_detached = false
+tag_disabled = false
+style = "dimmed yellow"
+
+[git_state]
+format = '[\[$state( $progress_current of $progress_total)\]]($style)'
+style = "dimmed yellow"
+
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+trim_at = "-"
+style = "bold blue"
+disabled = false
 
 [username]
 show_always = true
-format = '[$user ](bg:blue fg:black)'
+style_root = "bg:#9A348E"
+format = '[$user]($style)'
 disabled = false
+style_user = "bold blue"
 
-[os]
+[time]
 disabled = false
-style = 'bg:blue fg:black'
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
+format = "[🕙$time]($style)"
+time_format = "%R"
+utc_time_offset = "local"
+style = "italic white"
 
-[directory]
-format = "[$path](bg:green fg:black)"
-truncation_length = 2
-truncation_symbol = "…/"
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 100
+style = "bold red"
 
 [character]
-success_symbol = "[](bold blue)"
-error_symbol = "[✗](bold red)"
-disabled = true
+error_symbol = "[✖](bold red) "
 
-[fossil_branch]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[cmd_duration]
+min_time = 10_000 # Show command duration over 10,000 milliseconds (=10 sec)
+style = "dimmed red"
+format = '[\(took $duration\)]($style)'
 
-[git_branch]
-symbol = "  "
-format = '[$symbol($branch) ($version)]($style)'
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style)"
+style = "white"
 
-[git_commit]
-tag_symbol = '  '
-format = '[$symbol($version)]($style)'
 
-[aws]
-symbol = "   "
-format = '[$symbol($version)]($style)'
 
-[buf]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
-[c]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
-[cmake]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count} "
+behind = "🐢 ×${count} "
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+untracked = "🛤️  ×${count} "
+stashed = "📦 "
+modified = "📝 ×${count} "
+staged = "🗃️  ×${count} "
+renamed = "📛 ×${count} "
+deleted = "🗑️  ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
 
-[conda]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[crystal]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[dart]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[docker_context]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[elixir]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[elm]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[fennel]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[golang]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[guix_shell]
-symbol = "   "
-format = '[$symbol($version)]($style)'
-
-[haskell]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[haxe]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[hg_branch]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[hostname]
-ssh_symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[java]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
 [julia]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[kotlin]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[lua]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+format = "[$symbol$version]($style) "
+symbol = "ஃ "
+style = "bold green"
 
 [memory_usage]
-symbol = " 󰍛 "
-format = '[$symbol($version)]($style)'
-
-[meson]
-symbol = " 󰔷 "
-format = '[$symbol($version)]($style)'
-
-[nim]
-symbol = " 󰆥 "
-format = '[$symbol($version)]($style)'
-
-[nix_shell]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[nodejs]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[ocaml]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
 
 [package]
-symbol = " 󰏗 "
-format = '[$symbol($version)]($style)'
+disabled = true
 
-[perl]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
-[php]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[pijul_channel]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[python]
-symbol = "  "
-format = '[$symbol($version)]($style)'
-
-[rlang]
-symbol = " 󰟔 "
-format = '[$symbol($version)]($style)'
-
-[ruby]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
 [rust]
-symbol = " 󱘗 "
-format = '[$symbol($version)]($style)'
+format = "[$symbol$version]($style) "
+style = "bold green"
 
-[scala]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
-[swift]
-symbol = "  "
-format = '[$symbol($version)]($style)'
 
-[zig]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[typst]
+format = "[$symbol($version)]($style)"
+style = "bold #239dae"
 
-[gradle]
-symbol = "  "
-format = '[$symbol($version)]($style)'
+[sudo]
+format = "[$symbol]($style)"
+style = "bold italic bright-purple"
+symbol = "⋈┈"
+disabled = false
+
+
+
+[nodejs]
+format = "via [🤖 $version](bold green) "
