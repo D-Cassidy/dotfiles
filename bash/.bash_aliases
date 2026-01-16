@@ -2,11 +2,8 @@
 alias py='python3'
 alias tree='tree -I env'
 
-# Directory shortcuts 
-alias screeps="cd ~/.config/Screeps/scripts/screeps_newbieland_net___21025/default/"
-
 # Vim to Nvim
-alias vim='nvim'
+#alias vim='nvim'
 
 # Creates parent directories if they don't exist by default with mkdir
 alias mkdir='mkdir -p'

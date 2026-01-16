@@ -1,10 +1,10 @@
 [window]
+dimensions = { columns = 120, lines = 36 }
 padding = { x = 10, y = 10 }
 dynamic_padding = true
 decorations = "Full"
-opacity = 0.7
+opacity = 0.8
 decorations_theme_variant = "Dark"
 
 [font]
-normal = { family = "CodeNewRomanNerdFont", style="Regular"}
 size = 11
