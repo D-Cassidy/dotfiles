@@ -66,7 +66,7 @@ error_symbol = "[✖](bold red) "
 
 [cmd_duration]
 min_time = 10_000 # Show command duration over 10,000 milliseconds (=10 sec)
-style = "dimmed red"
+style = "bright-red"
 format = '[\(took $duration\)]($style)'
 
 [directory]
