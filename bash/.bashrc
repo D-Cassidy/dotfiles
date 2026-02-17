@@ -41,6 +41,3 @@ unset rc
 
 # Enable starship terminal
 eval "$(starship init bash)"
-
-# Add Pixi to PATH
-export PATH="/home/whimsickal/.pixi/bin:$PATH"
