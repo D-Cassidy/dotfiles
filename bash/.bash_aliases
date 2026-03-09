@@ -17,3 +17,4 @@ alias dc='cd'
 
 # git shortcuts
 alias gs='git status'
+alias gb='git branch'
